@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style src="css/style.css"></style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <title>Tenacious D Tribute Page</title>
 </head>
 <body id="main">
     <header>
         <h1 id="title">Tenacious D</h1>
-        <p id="title">This is not the greatest page in the world.  This is a tribute to the comedy rock band Tenacious D.</p>
+        <p>This is not the greatest page in the world.</p>
+        <p>This is a tribute to the band Tenacious D.</p>
     </header>
-    <div id="img-div">
-        <figure>
-            <img src="img/tenacious-d-band.jpg" alt="Tenacious D performing on stage" id="image">
-            <figcaption id="img-caption">From left, Kyle Gass and Jack Black, members of the band Tenacious D.</figcaption>
-        </figure>
-    </div>
+    <figure id="img-div">
+        <img id="image" src="img/tenacious-d-band.jpg" alt="Tenacious D performing on stage">
+        <figcaption id="img-caption">Kyle Gass and Jack Black, bandmates in Tenacious D.  Credit <a href="https://www.lostoak.com/">Ralph Arvesen</a>.</figcaption>
+    </figure>
     <section id="tribute-info">
-        <h2>Timeline of the band's rise to fame:</h2>
+        <h2>The History of Tenacious D:</h2>
         <ul>
             <li>1986 - Kyle Gass and Jack Black meet in an L.A. theater troupe.</li>
             <li>1994 - The duo performs for the first time as a band, getting their name from an audience vote.</li>
@@ -29,11 +31,11 @@
         </ul>
     </section>
     <footer>
-        <h3>Listen to <a href="https://en.wikipedia.org/wiki/Tenacious_D_discography" id="tribute-link" target="_blank">Tenacious D's discography</a> by clicking the below album covers</h3>
-            <div>  
-                <a href=""><img src="img/tenacious-d.jpg" alt="Cover for the album Tenacious D">Tenacious D</a>
-                <a href=""><img src="img/pick-of-destiny.jpg" alt="Cover for the album Pick of Destiny">Pick of Destiny</a>
-                <a href=""><img src="img/rize-of-the-fenix.png" alt="Cover for the album Rize of the Fenix">Rize of the Fenix</a>
+        <h3>Listen to <a href="https://en.wikipedia.org/wiki/Tenacious_D_discography" id="tribute-link" target="_blank">Tenacious D's music</a> by clicking the album covers</h3>
+            <div class="album-cards">  
+                <div class="card"><a href="https://www.youtube.com/playlist?list=OLAK5uy_my0Y8iaof2_ZaJLCc_4D7w0uLB0qNbgI8"><img class="card-img" src="img/tenacious-d.jpg" alt="Cover for the album Tenacious D">Tenacious D</a></div>
+                <div class="card"><a href="https://www.youtube.com/playlist?list=OLAK5uy_nXQwl9FD5P4QYndT1OheV2XWRwY9vqnlA"><img class="card-img" src="img/pick-of-destiny.jpg" alt="Cover for the album Pick of Destiny">Pick of Destiny</a></div>
+                <div class="card"><a href="https://www.youtube.com/playlist?list=OLAK5uy_kF40mXMCkwk4P2rNqCvHtAGbel6POjSAo"><img class="card-img" src="img/rize-of-the-fenix.png" alt="Cover for the album Rize of the Fenix">Rize of the Fenix</a></div>
             </div>  
     </footer>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
