@@ -10,17 +10,22 @@ body {
     margin: 0;
     background-color: var(--primary);
     font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
 }
 
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: var(--secondary-1);
 }
 
+#header-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 0 auto;
+    max-width: 650px;
+}
+
 #header-text {
-    margin: 20px 10px;
     text-align: center;
 }
 
@@ -28,11 +33,11 @@ header {
     color: var(--accent-1);
     font-weight: 400;
     font-size: 1.8rem;
+    margin-top: 0;
 }
 
 #description {
     color: var(--secondary-2);
-    font-size: 0.95rem;
 }
 
 img {
@@ -47,8 +52,13 @@ img {
 form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    max-width: 650px;
+    margin: 0 auto 0 auto;
+}
+
+section {
+    width: 100%;
 }
 
 h2 {
@@ -58,57 +68,61 @@ h2 {
     font-size: 1.4rem;
 }
 
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px auto;
+}
+
 label {
     display: inline-block;
+    flex-basis: 30%;
     text-align: right;
-    width: 150px;
     color: var(--secondary-1);
-    font-size: 0.95rem;
 }
 
 input {
     display: inline-block;
+    flex-basis: 50%;
+    flex-shrink: 0;
     margin-left: 10px;
-    width: 250px;
     height: 25px;
     background-color: var(--secondary-1);
     border: 0.5px solid var(--secondary-2);
+}
+
+#description, label, input {
     font-size: 0.95rem;
 }
 
-.form-group {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-}
-
-@media (max-width: 650px) {
-    header {
+@media (max-width: 700px) {
+    #header-card {
         flex-direction: column;
+        max-width: 320px;
     }
-    #header-text {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    img {
-        margin-top: 0px;
-        margin-bottom: 20px;
-    }
-    label {
-        width: 100px;
-    }
-    input {
-        height: 20px;
-        width: 150px;
-    }
-    h1 {
+    #title {
+        padding-top: 10px;
         font-size: 1.5rem;
     }
-
+    form {
+        max-width: 320px;
+    }
     h2 {
         font-size: 1.2rem;
     }
     #description, label, input {
         font-size: 0.8rem;
+    }
+    label {
+        flex-basis: 40%;
+    }
+    input {
+        flex-basis: 60%;
+        height: 20px;
+    }
+
+    img {
+        margin-top: 10px;
     }
 }
