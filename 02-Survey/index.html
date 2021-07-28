@@ -33,6 +33,13 @@
                     <label for="email" id="email-label">Customer Email</label>
                     <input type="email" name="customer-email" id="email" placeholder="Enter your email" required>
                 </div>
+                <fieldset class="form-group">
+                    <legend>Subscribe to our Newsletter?</legend>
+                    <div class="button-group">
+                        <label for="radio-yes"><input type="radio" id="radio-yes" name="newsletter" value="yes">Yes</label>
+                        <label for="radio-no"><input type="radio" id="radio-no" name="newsletter" value="no">No</label>
+                    </div>
+                </fieldset>
             </section>
             <section>
                 <h2>Pet Information</h2>
@@ -44,7 +51,32 @@
                     <label for="number" id="number-label" >Pet Age (Optional)</label>
                     <input type="number" name="pet-age" id="number" min="1" max="30" placeholder="Age">
                 </div>
+                <div class="form-group">
+                    <label for="number" id="number-label">Pet Breed</label>
+                    <select name="pet-breed" id="dropdown" class="form-group" required>
+                        <option value="">Select dog breed</option>
+                        <option value="retrierver">Retrierver</option>
+                        <option value="bulldog">Bulldog</option>
+                        <option value="german-shepherd">German Shepherd</option>
+                        <option value="poodle">Poodle</option>
+                        <option value="beagle">Beagle</option>
+                        <option value="other">Other (specify in comments)</option>
+                    </select>
+                </div>
+                <fieldset class="form-group">
+                    <legend>Services Needed<br>(select applicable)</legend>
+                    <div class="button-group">
+                        <label for="pet-bath"><input type="checkbox" id="pet-bath" name="pet-services" value="bath">Bath</label>
+                        <label for="pet-nail"><input type="checkbox" id="pet-nail" name="pet-services" value="nail">Nail Trim</label>
+                        <label for="pet-hair"><input type="checkbox" id="pet-hair" name="pet-services" value="hair">Hair Cut</label>
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    <label for="pet-comment" id="textarea-label">Other Comments?</label>
+                    <textarea name="pet-comment" id="pet-comment" placeholder="Pet health conditions, breed not listed, etc..."></textarea>
+                </div>
             </section>
+            <button type="submit" id="submit">Submit Form</button>
         </form>
     </main>
 </body>

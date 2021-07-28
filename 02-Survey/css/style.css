@@ -72,27 +72,79 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 10px auto;
+    margin: 0px auto 10px auto;
+    padding: 0px;
+    border: 0px;
 }
 
-label {
-    display: inline-block;
+label, legend {
+    display: block;
     flex-basis: 30%;
     text-align: right;
     color: var(--secondary-1);
 }
 
-input {
-    display: inline-block;
+legend {
+    float: left;
+    padding: 0px;
+    align-self: flex-start;
+}
+
+#textarea-label {
+    align-self: flex-start;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex-basis: 50%;
     flex-shrink: 0;
     margin-left: 10px;
-    height: 25px;
+}
+
+.button-group > label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.button-group > label:last-child {
+    margin: 0px;
+}
+
+input, #dropdown, textarea {
     background-color: var(--secondary-1);
     border: 0.5px solid var(--secondary-2);
 }
 
-#description, label, input {
+input[type="radio"], input[type="checkbox"] {
+    margin: 0px 10px 0px 0px;
+}
+
+input[type="text"], input[type="email"], input[type="number"], #dropdown, textarea {
+    flex-basis: 50%;
+    flex-shrink: 0;
+    margin: 0px 0px 0px 10px;
+    padding: 1px 2px 1px 2px;
+    height: 25px;
+    box-sizing: content-box;
+}
+
+#pet-comment {
+    height: 50px;
+}
+
+button {
+    font-size: 1rem;
+    background-color: var(--accent-1);
+    color: var(--secondary-1);
+    border: 1px solid var(--secondary-2);
+    margin: 10px 0px 20px 0px;
+    width: 25%;
+    height: 35px;
+}
+
+#description, label, input, legend, textarea {
     font-size: 0.95rem;
 }
 
@@ -111,18 +163,37 @@ input {
     h2 {
         font-size: 1.2rem;
     }
-    #description, label, input {
+    #description, label, input, legend, #dropdown, textarea {
         font-size: 0.8rem;
     }
-    label {
+    label, legend {
         flex-basis: 40%;
     }
-    input {
+
+    .button-group {
+        flex-basis: 60%;
+        margin-left: 16px;
+    }
+    input[type="text"], input[type="email"], input[type="number"], #dropdown, textarea {
         flex-basis: 60%;
         height: 20px;
     }
 
+    #pet-comment {
+        height: 40px;
+    }
+
     img {
         margin-top: 10px;
+    }
+
+    button {
+        font-size: 0.85rem;
+        background-color: var(--accent-1);
+        color: var(--secondary-1);
+        border: 1px solid var(--secondary-2);
+        margin: 10px auto;
+        width: 50%;
+        height: 30px;
     }
 }
